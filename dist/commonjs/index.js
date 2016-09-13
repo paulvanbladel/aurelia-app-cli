@@ -4,6 +4,15 @@ Object.defineProperty(exports, "__esModule", {
   value: true
 });
 exports.configure = configure;
-function configure(config) {
-  config.globalResources('./hello-world');
+
+var _appConsoleConfiguration = require('./app-console-configuration');
+
+function configure(aurelia, callback) {
+  var config = new _appConsoleConfiguration.AppConsoleConfiguration(aurelia);
+
+  if (typeof callback === 'function') {
+    callback(config);
+  } else {}
+
+  config._apply();
 }

@@ -1,0 +1,16 @@
+<template>
+    <require from="./app-console.css"></require>
+
+    <div class="webcli">
+        <div repeat.for="item of history">
+            <div class="webcli-cmd">${item.input}
+                <span class="webcli-busy-${item.isBusy}"></span>
+            </div>
+            <div class="webcli-${item.status}" textcontent="${item.output}" if.bind="isText(item)"></div>
+            <div class="webcli-${item.status}" if.bind="isHtml(item)" innerhtml.bind="item.output"> </div>
+        </div>
+        <input type="text" autofocus value.bind="newCommandInput" class="webcli-input-${!isBusy}" keyup.delegate="onKeyUp($event)"
+            spellcheck="false">
+
+    </div>
+</template>
