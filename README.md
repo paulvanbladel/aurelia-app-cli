@@ -23,6 +23,7 @@ Currently, the aurelia framework development environment is augmented with a Com
 
 ## future features
 * hotkey for activating and hiding the command window
+* improved 'scroll management'
 * persist command history to browser storage (currently the history is reset when the CLS command is executed)
 * more powerfull command parameter parsing
 
