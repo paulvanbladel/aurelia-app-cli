@@ -6,6 +6,10 @@ Currently, the aurelia framework development environment is augmented with a Com
 
 <img src="./pics/cli.png"  width="350">
 
+A running application is worth a billion words:
+
+https://paulvanbladel.github.io/aurelia-app-cli-sample
+
 ## In which scenarios can a(n) (aurelia) SPA benefit from a command line interface
 
 * prototype a feature that eventually will have a user interface.
