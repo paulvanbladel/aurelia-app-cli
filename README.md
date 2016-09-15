@@ -4,7 +4,7 @@
 
 Currently, the aurelia framework development environment is augmented with a Command Line Interface (a CLI). Mutatis Matandis, applications build with Aurelia can also benefit from a CLI. In general, a CLI allows a user to enter commands for performing various tasks in an application. Since a picture is worth a thousand words let's first look what an application CLI could look like:
 
-<div style="width:800px; margin:0 auto;"><img src="./pics/cli.png"  width="250"></div>
+<img src="./pics/cli.png"  width="350">
 
 ## In which scenarios can a(n) (aurelia) SPA benefit from a command line interface
 
