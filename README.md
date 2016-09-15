@@ -28,7 +28,7 @@ Currently, the aurelia framework development environment is augmented with a Com
 * more powerfull command parameter parsing
 
 ## a bit more on the internals of aurelia-app-cli
-*
+* //TODO
 
 ## Building The Code
 
