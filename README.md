@@ -1,11 +1,34 @@
-# aurelia-skeleton-plugin
+# aurelia-app-cli
 
-[![ZenHub](https://raw.githubusercontent.com/ZenHubIO/support/master/zenhub-badge.png)](https://zenhub.io)
-[![Join the chat at https://gitter.im/aurelia/discuss](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/aurelia/discuss?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+## what is the aurelia-app-cli plugin
 
-This skeleton is part of the [Aurelia](http://www.aurelia.io/) platform. It sets up a standard aurelia plugin using gulp to build your ES6 code with the Babel compiler. Karma/Jasmine testing is also configured.
+Currently, the aurelia framework development environment is augmented with a Command Line Interface (a CLI). Mutatis Matandis, applications build with Aurelia can also benefit from a CLI. In general, a CLI allows a user to enter commands for performing various tasks in an application. Since a picture is worth a thousand words let's first look what an application CLI could look like:
 
-> To keep up to date on [Aurelia](http://www.aurelia.io/), please visit and subscribe to [the official blog](http://blog.aurelia.io/) and [our email list](http://durandal.us10.list-manage1.com/subscribe?u=dae7661a3872ee02b519f6f29&id=3de6801ccc). We also invite you to [follow us on twitter](https://twitter.com/aureliaeffect). If you have questions, please [join our community on Gitter](https://gitter.im/aurelia/discuss). If you would like to have deeper insight into our development process, please install the [ZenHub](https://zenhub.io) Chrome or Firefox Extension and visit any of our repository's boards. You can get an overview of all Aurelia work by visiting [the framework board](https://github.com/aurelia/framework#boards).
+![CLI](https://github.com/paulvanbladel/aurelia-app-cli/tree/master/pics/cli.png)
+
+
+## In which scenarios can a(n) (aurelia) SPA benefit from a command line interface
+
+* prototype a feature that eventually will have a user interface.
+* allow the execution of certain tasks to be executed in a more efficient way: certain tasks can sometimes be executed more efficiently in a CLI like manner.
+* a 'backdoor' for fasciliating certain integration test scenarios.
+* the return value of a command executed in aurelia-app-cli is not limited to text (you are right, very much indeed, here it's richer than aurelia-cli :) ), aurelia-app-cli allows also html or graphics.
+
+## features
+
+* command history: key up and key down browses the command history
+* commands can return text, html (and thus also images)
+* command can be executed in parallel
+* commands are wrapped inside a promise, command execution status (success or fail) results in different coloring of the command result
+* a help command provides help on both the built-in commands (i.e. the command provided by default by aureli-app-cli) and the application specific commands (i.e. commands provided by the application consuming the aurelia-app-cli plugin).
+
+## future features
+* hotkey for activating and hiding the command window
+* persist command history to browser storage (currently the history is reset when the CLS command is executed)
+* more powerfull command parameter parsing
+
+## a bit more on the internals of aurelia-app-cli
+*
 
 ## Building The Code
 
@@ -31,28 +54,3 @@ To build the code, follow these steps.
 
 6. See `gulpfile.js` for other tasks related to generating the docs and linting.
 
-## Running The Tests
-
-To run the unit tests, first ensure that you have followed the steps above in order to install all dependencies and successfully build the library. Once you have done that, proceed with these additional steps:
-
-1. Ensure that the [Karma](http://karma-runner.github.io/) CLI is installed. If you need to install it, use the following command:
-
-  ```shell
-  npm install -g karma-cli
-  ```
-2. Ensure that [jspm](http://jspm.io/) is installed. If you need to install it, use the following commnand:
-
-  ```shell
-  npm install -g jspm
-  ```
-3. Install the client-side dependencies with jspm:
-
-  ```shell
-  jspm install
-  ```
-
-4. You can now run the tests with this command:
-
-  ```shell
-  karma start
-  ```
