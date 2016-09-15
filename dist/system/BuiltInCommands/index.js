@@ -1,6 +1,6 @@
 'use strict';
 
-System.register(['./clear-screen', './help'], function (_export, _context) {
+System.register(['./clear-screen', './help', './welcome'], function (_export, _context) {
   "use strict";
 
   return {
@@ -14,6 +14,11 @@ System.register(['./clear-screen', './help'], function (_export, _context) {
       _exportObj2.Help = _help.Help;
 
       _export(_exportObj2);
+    }, function (_welcome) {
+      var _exportObj3 = {};
+      _exportObj3.Welcome = _welcome.Welcome;
+
+      _export(_exportObj3);
     }],
     execute: function () {}
   };

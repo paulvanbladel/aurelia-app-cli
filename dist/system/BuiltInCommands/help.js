@@ -46,7 +46,7 @@ System.register(["../app-console-options"], function (_export, _context) {
 
                             var returnValue = result.join("\n");
                             resolve(returnValue);
-                        }, 2000);
+                        }, 1);
                     });
                 };
 

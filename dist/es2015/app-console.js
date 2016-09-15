@@ -13,11 +13,13 @@ export let AppConsoleCustomElement = (_dec = inject(All.of('Command')), _dec2 = 
         this.history = [];
         this.cmdOffset = 0;
         this.commandList = commandList;
-        debugger;
-        this.mergeBuiltInCommands();
+        this.runStartupCommand();
     }
 
-    mergeBuiltInCommands() {}
+    runStartupCommand() {
+        this.newCommandInput = "welcome";
+        this.addNewCommand(this.newCommand);
+    }
 
     onKeyUp(ev) {
         switch (ev.keyCode) {

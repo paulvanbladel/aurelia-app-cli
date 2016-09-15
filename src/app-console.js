@@ -13,15 +13,14 @@ export class AppConsoleCustomElement {
         this.history = [];
         this.cmdOffset = 0;
         this.commandList = commandList;
-        debugger;
-        this.mergeBuiltInCommands();
+        this.runStartupCommand();
     }
 
-    mergeBuiltInCommands() {
-        //merge following built-in commands with the custom commands to ensure uniform handling for both types
-
+    runStartupCommand() {
+        this.newCommandInput = "welcome";
+        this.addNewCommand(this.newCommand);
     }
-
+    
     onKeyUp(ev) {
         switch (ev.keyCode) {
             case ENTER_KEY:

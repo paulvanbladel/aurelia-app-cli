@@ -1,4 +1,4 @@
-define(['exports', './clear-screen', './help'], function (exports, _clearScreen, _help) {
+define(['exports', './clear-screen', './help', './welcome'], function (exports, _clearScreen, _help, _welcome) {
   'use strict';
 
   Object.defineProperty(exports, "__esModule", {
@@ -14,6 +14,12 @@ define(['exports', './clear-screen', './help'], function (exports, _clearScreen,
     enumerable: true,
     get: function () {
       return _help.Help;
+    }
+  });
+  Object.defineProperty(exports, 'Welcome', {
+    enumerable: true,
+    get: function () {
+      return _welcome.Welcome;
     }
   });
 });

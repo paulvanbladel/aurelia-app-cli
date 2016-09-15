@@ -25,7 +25,7 @@ export let Help = class Help {
 
                 var returnValue = result.join("\n");
                 resolve(returnValue);
-            }, 2000);
+            }, 1);
         });
     }
 };

@@ -42,7 +42,7 @@ define(["exports", "../app-console-options"], function (exports, _appConsoleOpti
 
                     var returnValue = result.join("\n");
                     resolve(returnValue);
-                }, 2000);
+                }, 1);
             });
         };
 

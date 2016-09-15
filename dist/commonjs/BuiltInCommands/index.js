@@ -21,3 +21,12 @@ Object.defineProperty(exports, 'Help', {
     return _help.Help;
   }
 });
+
+var _welcome = require('./welcome');
+
+Object.defineProperty(exports, 'Welcome', {
+  enumerable: true,
+  get: function get() {
+    return _welcome.Welcome;
+  }
+});

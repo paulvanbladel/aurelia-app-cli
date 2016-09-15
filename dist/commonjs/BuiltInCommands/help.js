@@ -39,7 +39,7 @@ var Help = exports.Help = function () {
 
                 var returnValue = result.join("\n");
                 resolve(returnValue);
-            }, 2000);
+            }, 1);
         });
     };
 

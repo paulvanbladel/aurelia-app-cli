@@ -25,11 +25,13 @@ define(['exports', 'aurelia-framework', './app-command'], function (exports, _au
             this.history = [];
             this.cmdOffset = 0;
             this.commandList = commandList;
-            debugger;
-            this.mergeBuiltInCommands();
+            this.runStartupCommand();
         }
 
-        AppConsoleCustomElement.prototype.mergeBuiltInCommands = function mergeBuiltInCommands() {};
+        AppConsoleCustomElement.prototype.runStartupCommand = function runStartupCommand() {
+            this.newCommandInput = "welcome";
+            this.addNewCommand(this.newCommand);
+        };
 
         AppConsoleCustomElement.prototype.onKeyUp = function onKeyUp(ev) {
             switch (ev.keyCode) {
