@@ -45,7 +45,7 @@ System.register(['aurelia-framework', 'aurelia-fetch-client'], function (_export
         };
 
         Welcome.prototype.getVersionNumber = function getVersionNumber() {
-          return '0.0.24';
+          return '0.0.29';
         };
 
         Welcome.prototype.getVersionNumberFromPackageJson = function getVersionNumberFromPackageJson() {

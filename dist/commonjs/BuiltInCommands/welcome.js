@@ -40,7 +40,7 @@ var Welcome = exports.Welcome = (_dec = (0, _aureliaFramework.inject)(_aureliaFe
   };
 
   Welcome.prototype.getVersionNumber = function getVersionNumber() {
-    return '0.0.24';
+    return '0.0.29';
   };
 
   Welcome.prototype.getVersionNumberFromPackageJson = function getVersionNumberFromPackageJson() {

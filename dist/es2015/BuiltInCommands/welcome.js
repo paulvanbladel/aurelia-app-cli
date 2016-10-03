@@ -27,7 +27,7 @@ export let Welcome = (_dec = inject(HttpClient), _dec(_class = class Welcome {
   }
 
   getVersionNumber() {
-    return '0.0.24';
+    return '0.0.29';
   }
 
   getVersionNumberFromPackageJson() {

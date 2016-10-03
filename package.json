@@ -1,6 +1,6 @@
 {
   "name": "aurelia-app-cli",
-  "version": "0.0.28",
+  "version": "0.0.29",
   "description": "Add a command line interface to your Aurelia SPA in minutes",
   "keywords": [
     "aurelia",
