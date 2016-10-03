@@ -30,7 +30,7 @@ export class Welcome {
   //hard time to get this work with await async, for the time being hard coding version
   //    async getVersionNumber() {
   getVersionNumber() {    //let data = await this.getVersionNumberFromPackageJson();
-    return '0.0.24';
+    return '0.0.29';
   }
 
   getVersionNumberFromPackageJson() {
