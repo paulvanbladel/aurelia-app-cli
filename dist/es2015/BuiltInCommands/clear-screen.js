@@ -1,12 +1,11 @@
-import { appConsoleOptions } from '../app-console-options';
 export let Cls = class Cls {
 
-    ResolveCommandLineArgs(args) {}
+  resolveCommandLineArgs(args) {}
 
-    UpdateAppCommand(command) {}
+  updateAppCommand(command) {}
 
-    help() {
-        return "clears the screen";
-    }
-    Execute() {}
+  help() {
+    return 'clears the screen';
+  }
+  execute() {}
 };

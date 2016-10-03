@@ -10,7 +10,6 @@ System.register(['./app-console-configuration'], function (_export, _context) {
     if (typeof callback === 'function') {
       callback(config);
     } else {}
-
     config._apply();
   }
 

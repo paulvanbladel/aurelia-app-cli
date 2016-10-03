@@ -1,8 +1,3 @@
-
-// export function configure(config) {
-
-// }
-
 import {AppConsoleConfiguration} from './app-console-configuration';
 
 export function configure(aurelia, callback) {
@@ -13,7 +8,5 @@ export function configure(aurelia, callback) {
   } else {
     //...
   }
-
-
   config._apply();
 }

@@ -11,7 +11,6 @@ define(['exports', './app-console-configuration'], function (exports, _appConsol
     if (typeof callback === 'function') {
       callback(config);
     } else {}
-
     config._apply();
   }
 });

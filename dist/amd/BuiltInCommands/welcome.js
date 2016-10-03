@@ -1,60 +1,57 @@
 define(['exports', 'aurelia-framework', 'aurelia-fetch-client'], function (exports, _aureliaFramework, _aureliaFetchClient) {
-    'use strict';
+  'use strict';
 
-    Object.defineProperty(exports, "__esModule", {
-        value: true
-    });
-    exports.Welcome = undefined;
+  Object.defineProperty(exports, "__esModule", {
+    value: true
+  });
+  exports.Welcome = undefined;
 
-    function _classCallCheck(instance, Constructor) {
-        if (!(instance instanceof Constructor)) {
-            throw new TypeError("Cannot call a class as a function");
-        }
+  function _classCallCheck(instance, Constructor) {
+    if (!(instance instanceof Constructor)) {
+      throw new TypeError("Cannot call a class as a function");
+    }
+  }
+
+  var _dec, _class;
+
+  var Welcome = exports.Welcome = (_dec = (0, _aureliaFramework.inject)(_aureliaFetchClient.HttpClient), _dec(_class = function () {
+    function Welcome(httpClient) {
+      _classCallCheck(this, Welcome);
+
+      this.httpClient = httpClient;
     }
 
-    var _dec, _class;
+    Welcome.prototype.help = function help() {
+      return 'prints the welcome text';
+    };
 
-    var Welcome = exports.Welcome = (_dec = (0, _aureliaFramework.inject)(_aureliaFetchClient.HttpClient), _dec(_class = function () {
-        function Welcome(httpClient) {
-            _classCallCheck(this, Welcome);
+    Welcome.prototype.resolveCommandLineArgs = function resolveCommandLineArgs(args) {};
 
-            this.httpClient = httpClient;
-        }
+    Welcome.prototype.updateAppCommand = function updateAppCommand(command) {};
 
-        Welcome.prototype.help = function help() {
-            return "prints the welcome text";
-        };
+    Welcome.prototype.execute = function execute() {
+      var _this = this;
 
-        Welcome.prototype.ResolveCommandLineArgs = function ResolveCommandLineArgs(args) {};
+      return new Promise(function (resolve, reject) {
+        setTimeout(function () {
+          var returnValue = 'Hi welcome to the aurelia application CLI version ' + _this.getVersionNumber();
+          resolve(returnValue);
+        }, 1);
+      });
+    };
 
-        Welcome.prototype.UpdateAppCommand = function UpdateAppCommand(command) {};
+    Welcome.prototype.getVersionNumber = function getVersionNumber() {
+      return '0.0.24';
+    };
 
-        Welcome.prototype.Execute = function Execute() {
-            var _this = this;
+    Welcome.prototype.getVersionNumberFromPackageJson = function getVersionNumberFromPackageJson() {
+      return this.httpClient.fetch('package.json').then(function (response) {
+        return response.json();
+      }).then(function (data) {
+        return data.version;
+      });
+    };
 
-            return new Promise(function (resolve, reject) {
-                setTimeout(function () {
-                    debugger;
-
-                    var returnValue = "Hi welcome to the aurelia application CLI version " + _this.getVersionNumber();
-                    resolve(returnValue);
-                }, 1);
-            });
-        };
-
-        Welcome.prototype.getVersionNumber = function getVersionNumber() {
-
-            return "0.0.24";
-        };
-
-        Welcome.prototype.getVersionNumberFromPackageJson = function getVersionNumberFromPackageJson() {
-            return this.httpClient.fetch('package.json').then(function (response) {
-                return response.json();
-            }).then(function (data) {
-                return data.version;
-            });
-        };
-
-        return Welcome;
-    }()) || _class);
+    return Welcome;
+  }()) || _class);
 });
