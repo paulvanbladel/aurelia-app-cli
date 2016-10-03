@@ -13,16 +13,13 @@ gulp.task('build-html', function () {
     .pipe(gulp.dest(paths.output + 'system'));
 });
 
-// copies changed css files to the output directory
 gulp.task('build-css', function() {
   return gulp.src(paths.css)
-   .pipe(gulp.dest(paths.output + 'es2015'))
+    .pipe(gulp.dest(paths.output + 'es2015'))
     .pipe(gulp.dest(paths.output + 'commonjs'))
     .pipe(gulp.dest(paths.output + 'amd'))
     .pipe(gulp.dest(paths.output + 'system'));
 });
-
-
 
 gulp.task('build-es2015', function () {
   return gulp.src(paths.source)
